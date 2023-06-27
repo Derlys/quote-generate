@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Quote} from './quote'
+import { Quote} from '../quote'
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +7,7 @@ import { Quote} from './quote'
 export class QuoteService {
 
   quotes: Quote[] =[{
-    quote:'HOLA TEST',
+    text:'HOLA TEST',
     author:'derlys',
   },
   ];
