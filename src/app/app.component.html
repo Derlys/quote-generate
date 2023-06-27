@@ -1,10 +1,7 @@
 <div>
-  <form (ngSubmit)="newQuote()">
-    <h1>Quote generate text</h1>
-    <blockquote>Hola</blockquote>
+    <h1>{{quote?.text}}</h1>
+    <blockquote>{{quote?.author}}</blockquote>
     <br>
+    <button (click)="getRandomQuote()">Generate</button>
     <br>
-    <p>Author</p>
-    <button type="submit">Generate</button>
-  </form>
 </div>
