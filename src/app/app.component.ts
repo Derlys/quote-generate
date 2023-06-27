@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {QuoteService} from './quote.service'
+import {Quote} from './quote'
 
 @Component({
   selector: 'app-root',
@@ -8,7 +10,17 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'quote';
 
-  getRandom(){
+quotes: Quote[];
+  constructor( private readonly quoteService: QuoteService) {
+    this.quotes = this.quoteService.quotes
 
   }
+  quote : Quote ={
+    quote:"",
+    author:"",
+  }
+  newQuote(){
+    this.quoteService.quotes.push(this.quote);
+  }
+
 }
